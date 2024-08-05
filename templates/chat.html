@@ -34,7 +34,8 @@
             <em><h5 class="chat-header-title">Framwork Chat with our AI Assistant Thera</h5></em>
         </div>
         <div class="chat-msg-box"> 
-            <p style="padding:10px;" class="botText">Hello</p>
+            <p style="padding:10px;" class="botText">Hello, <br> This is an AI Medical Chat<br>This is completely anonymous, with no form of data collection. Each patient, will be marked with an ID, having no correlation to any information collected. This is a complete closed chat to be used to collect more information in determining a more accurate diagnosis, and providing more personalized healthcare to the user.<br></br>In order to start chatting, message "I need help". <br>Please be patient, as personalized responses may take up to 5 minutes.</p>
+            <p style="padding:10px;" class="botText">To end messaging, message "I am satisfied with my care", close this webpage, or return to any other page on the website.</p>
         </div>
     </div>
 
@@ -59,8 +60,8 @@
                         var botHtml = '<p class="botText" style="padding:10px;">' + data + "</p>";
                         var userHtml = '<p class ="userText" style="padding:10px;">' + rawText + "</p>"; 
 
-
                         $(".chat-msg-box").append(userHtml); 
+                        $("#chatMessage").val(""); 
                         $(".chat-msg-box").append(botHtml);
                     }); 
                 } else {
@@ -70,7 +71,8 @@
                         var botHtml = '<p class="botText" style="padding:10px;">' + data + "</p>";
                         var userHtml = '<p class ="userText" style="padding:10px;">' + rawText + "</p>"; 
 
-                        $(".chat-msg-box").append(userHtml);                         
+                        $(".chat-msg-box").append(userHtml);    
+                        $("#chatMessage").val("");                      
                         $(".chat-msg-box").append(botHtml);
                     });
                 }
