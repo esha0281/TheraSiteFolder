@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static\css\style.css">
+    <title>THERA-AI | Health Assistant</title>
+    <link rel="icon" type="image/x-icon" href="static\images\favicon.svg">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/">Getting Started</a></li>
+    
+        </ul>
+    </nav>
+    
+    <article>
+        <div style = "text-align: left;">
+            <img src="static\images\pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg" alt="Main Logo" style="margin: 0px; width:400px;height:400px;">
+            <h1 style="margin: 0px;">TheraAI<sup>assistant</sup></h1>
+            <h5 style="padding=10px; text-align:left; margin-left: 25px;"><em>Simple Personal Healthcare<em><h5>
+        </div>
+    </article>  
+
+    
+    <div class="form-group" style="text-align: right;">
+        <h2 style="margin-top: 40px; padding: 10px;text-align: right">About the Patient<h2>
+        <div class="descriptionForm"style="text-align: right;">
+            <em><h5 style="padding: 0px; margin-top: 0px; text-align: right">Patient's gender, age, height, weight, symptoms, and any other background medical information. In order to begin the process of using the AI Health Check, input some simple information about your symptoms. Being more specific will allow for a more consise diagnosis report, and better chat personalization.</h5></em>
+        </div>
+
+        <form method="POST">
+            <br>
+            <input type="text" name="weight" id="weight_input" placeholder="Weight" ></input>
+            <input type="text" name="height" id="height_input"
+            placeholder= "Height"></input>
+            <input type="text"
+            name="gender" id="gender_input" placeholder="Gender"></input>
+            <input type="text" name="age" id="age_counter" placeholder="Age"></input>
+            <br></br>
+            <textarea type="text"
+            name="symptomSummary"
+            id="symptom_Summary"
+            placeholder= "Describe medical situation or symptoms. . . "></textarea>
+            <br>
+            <textarea type="text"
+            name="backgroundInfo"
+            id="background_info"
+            placeholder= "Indicate background or medical history to these symptoms . . . "></textarea>
+            <br>
+            <input type="submit" value="Submit"></input>
+            <input type="reset" value="Reset"></input>
+            
+        </form>
+    </div>
+    
+</body>
+</html>

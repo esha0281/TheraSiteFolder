@@ -1,0 +1,231 @@
+.lexend-main_title {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.anton-sc-regular {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.work-sans-light {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  
+
+  body {
+    background-color: whitesmoke;
+    padding: 0px; 
+  }
+  header {
+    background-color: #333;
+  }
+  h1 {
+    font-family: "Lexend", sans-serif;
+    font-weight: bold; 
+    font-size: 60pt;
+    color: black;
+    padding: 10px; 
+  }
+
+  h2 {
+    font-family: "Lexend", sans-serif;
+    font-weight: bold; 
+    color: black;
+  }
+  h6 {
+    font-family: "Lexend", sans-serif;
+    font-size: 14pt; 
+  }
+  h5 {
+    font-family: "Work Sans", sans-serif; 
+    font-size: 10pt; 
+    margin: 0px; 
+  }
+  sup {
+    font-size: 12pt;
+    font-weight: normal;
+  }
+  p {
+    color: red;
+  }
+  img {
+    padding: 0px;
+  }
+  div {
+    margin: 0px; 
+    padding: 30px; 
+  }
+  article {
+    float: left;
+
+  }
+  nav {
+    background-color: #333; 
+    padding: 0; 
+  }
+
+  nav ul {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+    background-color: #333;
+    display: flex; 
+    justify-content:left;
+  }
+
+  nav li {
+    float: left; 
+  }
+
+  nav li a {
+    font-family: "Lexend", sans-serif;
+    display: block; 
+    color: white; 
+    text-align: left; 
+    padding: 14px 16px; 
+    text-decoration: none; 
+  }
+
+  nav li a:hover {
+    text-shadow: 2px 2px 5px red;
+  }
+
+  input[type=text] {
+    margin-right: 25px;
+  }
+
+  .descriptionForm {
+    margin-left: 40%;
+    text-align: justify;
+    overflow-wrap: normal;
+  }
+
+  textarea {
+    width: 50%;
+    height: 180px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+  .chat-container{
+    margin: 70px 0.5px 10px 45%;
+    width: 50%; 
+    height: 400px;
+    padding: 0px; 
+    border-radius: 5px;
+    border: 2px solid #333;
+    background-color: white;
+    box-shadow: 0 0 20px #575656;
+    overflow-y:auto; 
+
+  }
+  
+  .chat-header{
+    margin: 0px 0px 0px 0px;
+    background-color: #333;
+    padding: 10px; 
+
+  }
+
+  .chat-header-title {
+    color: white;
+  }
+
+  .chat-message-box {
+    overflow-y: scroll !important;
+  }
+
+  .botText {
+    width: 50%;
+    font-size: 12px; 
+    font-family: "Poppins", sans-serif;
+    margin-top: 0%;
+    background: #efefef none repeat scroll 0 0;
+    display: flexbox;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    color: black;
+    border-radius: 20px;
+    box-shadow: rgb(0 0 0 / 25%) 0px 5px 5px 2px;
+    overflow-y: auto;
+    overflow-x: auto;
+    overflow-wrap: normal;
+  }
+
+  .userText {
+    margin-left: 50%;
+    width: 50%;
+    font-size: 12px; 
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(90deg, rgba(219,112,139,1) 35%, rgba(232,13,13,1) 99%);
+    display: flexbox;
+    font-weight: 400;
+    color: white;
+    text-align: right;
+    border-radius: 20px;
+    box-shadow: rgb(0 0 0 / 25%) 0px 5px 5px 2px;
+    overflow-y: auto;
+    overflow-x: auto;
+    overflow-wrap: normal;
+  }
+
+  input[id="chatMessage"] {
+    width: 40%;
+    resize:vertical;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x:hidden;
+    overflow-wrap: normal;
+    border: 2px solid #333;
+    background-color: white;
+    
+  }
+
+  input[id="chatMessage"]:active{
+    box-shadow: 0 0 20px #575656;
+  }
+
+  button[id="send"] {
+    height: 22px; 
+    border: 2px solid #333;
+  }
+
+  button[id="send"]:hover {
+    box-shadow: 0 0 20px #575656;
+  }
+
+  button[id="send"]:active {
+    background-color:  #333;
+  }
+
+  .input-section {
+    padding: 0px; 
+    margin-right: 10%;
+    margin-top: 5%;
+  }
+
