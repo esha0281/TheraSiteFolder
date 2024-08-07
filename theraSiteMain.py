@@ -9,6 +9,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv, find_dotenv
 
 
+
 #defining base file paths
 response_base_path = r'C:\Users\esham\OneDrive\Documents\TheraSiteFolder\Responses_Output'
 base_path2= r'C:\Users\esham\OneDrive\Documents\TheraSiteFolder'
@@ -155,6 +156,10 @@ def chat_Page():
     #         print(chat_response.text)
     
     return render_template('chat.html')
+
+@app.route('/doctor_login', methods=['POST', 'GET'])
+def doctor_login(): 
+    return render_template('doctor_login.html')
 
 @app.route('/getFirstResponse', methods=['GET', 'POST'])
 def get_first_bot_response():
