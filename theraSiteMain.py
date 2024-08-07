@@ -7,7 +7,9 @@ from sqlalchemy.orm import Mapped, mapped_column
 import os, datetime
 import google.generativeai as genai
 from dotenv import load_dotenv, find_dotenv
-
+import random
+import string
+# from reportlab.pdfgen import canvas 
 
 
 #defining base file paths
@@ -22,6 +24,14 @@ sysCHAT_InstructionsFILE= open(os.path.join(base_path2, crSYS_instructionPath))
 medical_prompt = ""
 patient_summary_message = ""
 
+
+# def response_summary_toPDF(c, res):
+#     c.drawString(8.5,0, res)
+
+def generate_random_id(length=30):
+  """Generates a random ID of specified length containing letters and numbers."""
+  characters = string.ascii_letters + string.digits
+  return ''.join(random.choice(characters) for _ in range(length)) 
 
 #declarative list of functions 
 def geminiConfigure(sys1, sys2):
@@ -77,12 +87,21 @@ def geminiRunEvaluation(rt):
         response = report_model1.generate_content(md)
         responseOutputFile.write(response.text)
         responseOutputFile.close()
+        # response_summary_toPDF(sm)
+        # sm.showPage()
+        # sm.save()
         
     
     #instance internal variables
+    
+    global id, response_output_file_path
     date_time = functionFileCreation(str(datetime.datetime.now()))
-    responseOutputFile = open(os.path.join(response_base_path,("response" + date_time +".txt")), "x")
+    id = generate_random_id()
+    response_output_file_path = os.path.join(response_base_path,("response" + id + date_time +".txt"))
+    responseOutputFile = open(os.path.join(response_base_path,("response" + id + date_time +".txt")), "x")
     medical_prompt = rt
+    
+    # sum = canvas.Canvas("response" + date_time + ".pdf")
     
     #final response function
     medPromptRun(medical_prompt)
@@ -102,6 +121,10 @@ db.init_app(app)
 class Prompt_Answer3(db.Model): 
     prompt: Mapped[str] = mapped_column(unique=False)
     answer: Mapped[str] = mapped_column(primary_key = True)
+    
+class medicalReport(db.Model):
+    id: Mapped[str] = mapped_column(primary_key= True)
+    url_to_txt: Mapped[str] = mapped_column(primary_key= True)
     
 geminiConfigure(sysInstructionsFILE, sysCHAT_InstructionsFILE)
     
@@ -128,9 +151,9 @@ def main_Page():
         
         
         medical_review_preview = geminiRunEvaluation(patient_summary_message)
-        prompt_Generation = Prompt_Answer3(prompt = patient_summary_message, answer = medical_review_preview)
-        db.session.add(prompt_Generation)
-        db.session.commit()
+        # prompt_Generation = Prompt_Answer3(prompt = patient_summary_message, answer = medical_review_preview)
+        # db.session.add(prompt_Generation)
+        # db.session.commit()
         # geminiConfigure(sysCHAT_InstructionsFILE)
         return redirect(url_for('chat_Page'))
 
