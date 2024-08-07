@@ -30,7 +30,11 @@
         </div>
     </article>  
  
+    <a href='static\images\favicon.svg' download="savedReport.txt">hello</a>
 
+    {% for report in reports %}
+        <a class="text-center" href={{ report.url_to_txt }} download="savedReport.txt" >{{ report.url_to_txt }}</a>
+        {% endfor %}
     
 </body>
 </html>

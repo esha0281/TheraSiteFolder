@@ -13,8 +13,10 @@ import string
 
 
 #defining base file paths
-response_base_path = r'C:\Users\esham\OneDrive\Documents\TheraSiteFolder\Responses_Output'
+response_base_path = r'C:\Users\esham\OneDrive\Documents\TheraSiteFolder\static\Responses_Output'
+response_static_path= r'static\Responses_Output'
 base_path2= r'C:\Users\esham\OneDrive\Documents\TheraSiteFolder'
+
 
 #system instructions and file exchange 
 nRSYS_instructionPath = "SYS_instructionsR3.7.3.7.txt"
@@ -91,13 +93,12 @@ def geminiRunEvaluation(rt):
         # sm.showPage()
         # sm.save()
         
-    
     #instance internal variables
     
     global id, response_output_file_path
     date_time = functionFileCreation(str(datetime.datetime.now()))
     id = generate_random_id()
-    response_output_file_path = os.path.join(response_base_path,("response" + id + date_time +".txt"))
+    response_output_file_path = os.path.join(response_static_path, ("response" + id + date_time +".txt"))
     responseOutputFile = open(os.path.join(response_base_path,("response" + id + date_time +".txt")), "x")
     medical_prompt = rt
     
@@ -145,7 +146,7 @@ def main_Page():
         patient_symptom_summary = request.form['symptomSummary']
         patient_background = request.form['backgroundInfo']
         
-        global patient_summary_message, medical_review_preview 
+        global patient_summary_message, medical_review_preview
         
         patient_summary_message = patient_weight + "," + patient_height + "," + patient_gender + "," + patient_age+ "," + patient_symptom_summary + ", " + patient_background
         
@@ -155,6 +156,10 @@ def main_Page():
         # db.session.add(prompt_Generation)
         # db.session.commit()
         # geminiConfigure(sysCHAT_InstructionsFILE)
+        
+        reportGeneration = medicalReport(id = id, url_to_txt = '' + response_output_file_path + '')
+        db.session.add(reportGeneration)
+        db.session.commit() 
         return redirect(url_for('chat_Page'))
 
         
@@ -163,7 +168,7 @@ def main_Page():
 
 @app.route('/chat', methods=['POST','GET'])
 def chat_Page():
-    # print(Prompt_Answer3.query.all())
+    print(medicalReport.query.all())
     # print(geminiRunEvaluation(patient_summary_message))
     global chat, chatUser
     chat = chat_model2.start_chat(history=[])
@@ -182,7 +187,8 @@ def chat_Page():
 
 @app.route('/doctor_login', methods=['POST', 'GET'])
 def doctor_login(): 
-    return render_template('doctor_login.html')
+    reports = medicalReport.query.all()
+    return render_template('doctor_login.html', reports = reports)
 
 @app.route('/getFirstResponse', methods=['GET', 'POST'])
 def get_first_bot_response():
