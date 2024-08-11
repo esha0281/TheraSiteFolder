@@ -16,34 +16,47 @@
         <ul>
             <li><a href="/home">Home</a></li>
             <li><a href="/">Getting Started</a></li>
-            <li><a href="/doctor_login">Doctor Connect+</a><li>
+            <li><a href="/connectSessionDM">Doctor Connect+</a><li>
     
         </ul>
     </nav>
     
     <article>
         <div style = "text-align: left;">
-            <img src="static\images\pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg" alt="Main Logo" style="margin: 0px; width:400px;height:400px;">
-            <h1 style="margin: 0px;">TheraAI<sup>assistant</sup></h1>
-            <h5 style="padding=10px; text-align:left; margin-left: 25px;"><em>Simple Personal Healthcare<em><h5>
+            <img class="icon" src="static\images\pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg" alt="Main Logo" style="margin-left: 15%; margin-top: 7%; width:400px;height:400px;">
+            <h1 class="mainTITLE" style="margin-left: 15%; margin-bottom: 0;"><a style="text-decoration: none; color: black;" href="/home">TheraAI<sup>assistant</sup></a></h1>
+            <h5 class="mainsubTITLE" style="margin-left: 25%;"><em>Simple Personal Healthcare<em></h5>
         </div>
     </article>  
 
-    
-    <div class="form-group" style="text-align: right;">
-        <h2 style="margin-top: 40px; padding: 10px;text-align: right">About the Patient<h2>
-        <div class="descriptionForm"style="text-align: right;">
-            <em><h5 style="padding: 0px; margin-top: 0px; text-align: right">Patient's gender, age, height, weight, symptoms, and any other background medical information. In order to begin the process of using the AI Health Check, input some simple information about your symptoms. Being more specific will allow for a more consise diagnosis report, and better chat personalization.</h5></em>
+    <div class="index_pageAD" >
+        <h2 class="messageAD" style="text-align: left; margin-top: 0px; margin-bottom: 0px; margin-right: 45%; font-size: 35pt; color: white;">Welcome to Thera AI</h2>
+        <h2 class="messageAD" style="text-align: right; margin-top: 20px; margin-bottom: 0px; margin-left: 35%; font-size: 12pt; color: black;">Doctors and patients can freely access the help they need through<br> AI services of healthcare, diagnosis, and health advice via the web.</h2><br>
+        <h2 class="messageAD" style="text-align: left; margin-top: 10px; margin-bottom: 0px; margin-right: 40%; font-size: 12pt; color: white;">Easy to Use, and requires little information to provide advice, to psychological, physical, and internal health</h2><br>
+        <h2 class="messageAD" style="text-align: right; margin-top: 10px; margin-bottom: 0px; margin-left: 35%;font-size: 12pt; color: black;">For patients, get access to doctors on the site, and chat with AI.<br>For doctors, read generated medical reports, and receive an<br>assistant in the office.</h2><br>
+        <h2 class="messageAD" style="text-align: left; margin-top: 10px; margin-bottom: 0px; margin-right: 40%; font-size: 12pt; color: white;">private :: personal :: priceless</h2>
+        <div class="messageAD" style="text-align: right; margin-top: 2%; margin-left: 40%;">
+            <img class="icM" style="width: 140px; height: 140px; display:inline-block;" src="static\images\icons\person_60dp_000000_FILL0_wght400_GRAD0_opsz48.png"></img>
+            <img class="icM" style="width: 140px; height: 140px;display:inline-block;" src="static\images\icons\equal_60dp_000000_FILL0_wght400_GRAD0_opsz48.png"></img>
+            <img class="icM" style="width: 140px; height: 140px; display:inline-block; margin-bottom: 0%;" src="static\images\icons\heart_check_60dp_000000_FILL0_wght400_GRAD0_opsz48.png"></img>
+            <h2 style="margin-top: 0%; font-size: 12pt; color: color">Scroll Below to start now!</h2>
         </div>
+    </div>
+
+    
+    <div class="form-group" style="text-align: center;">
+        <h1 style="font-style:normal; margin-top: 0px; margin-bottom: 0px; text-align: center;">AI Medical Form</h1>
+        <h2 style="font-style:italic; margin-top: 0px; margin-bottom: 0px; padding: 10px;text-align: center;">About the Patient</h2><br>
+        <h5 class="form-description" style="font-style: normal; padding: 0px; margin-top: 0px; text-align: center; text-justify: inter-word;">In order to begin the process of using the AI Health Check, input some simple information about your symptoms.<br>Being more specific [such as adding weight, gender, height, and age] will allow for a more consise diagnosis<br>report, and better chat personalization.</h5>
 
         <form method="POST">
             <br>
-            <input type="text" name="weight" id="weight_input" placeholder="Weight" ></input>
-            <input type="text" name="height" id="height_input"
+            <input class="patientSummary_Case" type="text" name="weight" id="weight_input" placeholder="Weight" ></input>
+            <input class="patientSummary_Case" type="text" name="height" id="height_input"
             placeholder= "Height"></input>
-            <input type="text"
+            <input class="patientSummary_Case" type="text"
             name="gender" id="gender_input" placeholder="Gender"></input>
-            <input type="text" name="age" id="age_counter" placeholder="Age"></input>
+            <input class="patientSummary_Case" type="text" name="age" id="age_counter" placeholder="Age"></input>
             <br></br>
             <textarea type="text"
             name="symptomSummary"

@@ -1,0 +1,45 @@
+## Report: 
+
+**Patient Information:**
+
+* Age:  (Please provide the patient's age) 
+* Gender: (Please provide the patient's gender) 
+* Medical History: (Please provide any relevant medical history, including past diagnoses, surgeries, medications, and allergies)
+
+**Presenting Concern:** 
+
+* (Please provide the patient's presenting concern, including specific symptoms, duration, and any relevant information) 
+
+**General Term:** 
+
+* (This section will be filled once the presenting concern and patient information are provided.) 
+
+**Diagnosis(es):**
+
+* (This section will be filled once the presenting concern and patient information are provided.)
+
+**Possible Causes:**
+
+* (This section will be filled once the presenting concern and patient information are provided.)
+
+**Treatments:**
+
+* (This section will be filled once the presenting concern and patient information are provided.)
+
+**Discussion:**
+
+Hello, it seems like you're going through a tough time right now. I understand that you're seeking help, and I'm here to listen and do my best to support you. As an AI assistant working alongside a human healthcare professional, I can't offer a definitive diagnosis or treatment plan. I need more information from you to understand what's going on.  
+
+It's important to me that you feel comfortable sharing your concerns.  Please tell me more about what's been happening. What symptoms are you experiencing? When did they start?  Have you had any similar experiences in the past?
+
+I know it can be scary and overwhelming to feel unwell. My purpose is to assist your doctor in providing the best possible care.  I'll work together with your doctor to gather the necessary information and provide you with the resources and support you need. 
+
+**Please don't hesitate to tell me anything that feels relevant.  The more details you share, the better I can understand your situation and help your doctor find the best solution.**
+
+**Remember, we're here to help you feel better. You're not alone in this.** 
+
+**Resources:**
+
+* (This section will be filled once the presenting concern and patient information are provided.) 
+
+**Please note:** This report is incomplete and requires more information from the patient.  I will continue to update this report as you provide more information. 

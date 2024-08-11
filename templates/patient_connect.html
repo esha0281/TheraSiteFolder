@@ -30,24 +30,28 @@
         </div>
     </article>  
  
-    <h2 style="margin-top: 40px; margin-bottom: 0px; margin-left: 34%; margin-right: 25px; padding: 10px; text-align: right">Hello, {{doctorAccount.firstName}} {{doctorAccount.lastName}}</h2>
+    <h2 style="margin-top: 40px; margin-bottom: 0px; margin-left: 38%; padding: 10px; text-align: center">Connection Chart - Social Email Contact</h2>
     <div class="reportCenter">
         
-        <ul class="medicalLinks" style="text-align:left;">
-            {% for report in reports %}
-                <li class="medPoints">
-                    <p class="patientID" style="text-align:left;">Patient-ID: {{report.id}}</p>
-                    <a class="medicalReportLinks" href={{ report.url_to_txt }} target="blank">Patient User Report |View in Browser|</a>
-                    <br>
-                    <a class="medicalReportLinks" href={{ report.url_to_txt }} download="report.txt">Patient User Report |Download|</a>
-                </li>
-                <span class="timeStamp">Timestamp: {{report.date_time}}</span>
-                <br>
-                <br>
+        <table class="contactList">
+            <tr>
+                <th>First Name:</th>
+                <th>Last Name:</th>
+                <th>Email:</th>
+                <th>Office Location:</th>
+            </tr>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{contact.firstName}}</td>
+                    <td>{{contact.lastName}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.officeLocation}}</td>
+                </tr>
                 {% endfor %}
-        <ul>
+        </table>
 
     <div>
+    
     
 </body>
 </html>

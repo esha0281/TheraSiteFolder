@@ -1,6 +1,6 @@
 
 #needed libraries, dependencies, etc
-from flask import Flask, render_template,request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
@@ -119,13 +119,24 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///main.db"
 db.init_app(app)
 
+
+
 class Prompt_Answer3(db.Model): 
     prompt: Mapped[str] = mapped_column(unique=False)
     answer: Mapped[str] = mapped_column(primary_key = True)
     
-class medicalReport(db.Model):
+class medicalReport2(db.Model):
     id: Mapped[str] = mapped_column(primary_key= True)
     url_to_txt: Mapped[str] = mapped_column(primary_key= True)
+    date_time: Mapped[str] = mapped_column()
+    
+class doctorsAccount6(db.Model):
+    firstName: Mapped[str] = mapped_column()
+    lastName: Mapped[str] = mapped_column()
+    officeLocation: Mapped[str] = mapped_column()
+    email: Mapped[str] = mapped_column(primary_key=True)
+    password: Mapped[str] = mapped_column()
+    
     
 geminiConfigure(sysInstructionsFILE, sysCHAT_InstructionsFILE)
     
@@ -138,11 +149,12 @@ def home_Page():
 
 @app.route('/', methods=['POST','GET'])
 def main_Page():
+    session['logged_in'] = False
     if request.method == 'POST':
         patient_weight = request.form['weight']
         patient_height = request.form['height']
         patient_gender = request.form['gender']
-        patient_age = request.form['age']
+        patient_age = request.form['age'] + " years old"
         patient_symptom_summary = request.form['symptomSummary']
         patient_background = request.form['backgroundInfo']
         
@@ -157,7 +169,7 @@ def main_Page():
         # db.session.commit()
         # geminiConfigure(sysCHAT_InstructionsFILE)
         
-        reportGeneration = medicalReport(id = id, url_to_txt = '' + response_output_file_path + '')
+        reportGeneration = medicalReport2(id = id, url_to_txt = '' + response_output_file_path + '', date_time=str(datetime.datetime.now()))
         db.session.add(reportGeneration)
         db.session.commit() 
         return redirect(url_for('chat_Page'))
@@ -168,7 +180,7 @@ def main_Page():
 
 @app.route('/chat', methods=['POST','GET'])
 def chat_Page():
-    print(medicalReport.query.all())
+    print(medicalReport2.query.all())
     # print(geminiRunEvaluation(patient_summary_message))
     global chat, chatUser
     chat = chat_model2.start_chat(history=[])
@@ -185,10 +197,52 @@ def chat_Page():
     
     return render_template('chat.html')
 
+@app.route('/connectSessionDM', methods=['POST', 'GET'])
+def connect_session():
+    return render_template('connect_session.html')
+
+@app.route('/patient_connect', methods=['POST', 'GET'])
+def patient_connect():
+    doctorsContact= doctorsAccount6.query.all()
+    return render_template('patient_connect.html', contacts = doctorsContact)
+
+@app.route('/doctor_create_portal', methods=['POST', 'GET']) 
+def create_account():
+    if request.method == 'POST': 
+        firstNameAccount = request.form['firstName']
+        lastNameAccount = request.form['lastName']
+        location = request.form['location']
+        emailAccount = request.form['email']
+        passwordAccount = request.form['password']
+        
+        addNewDoctor = doctorsAccount6(firstName = firstNameAccount, lastName = lastNameAccount, officeLocation = location, email = emailAccount, password = passwordAccount)
+        db.session.add(addNewDoctor)
+        db.session.commit()
+        return redirect(url_for('login_required'))
+    return render_template('create_account.html')
+
+@app.route("/doctor_login_portal", methods=['POST', 'GET'])
+def login_required():
+    # print(doctorsAccount6.query.all())  
+    if request.method == 'POST': 
+        global accountLoginUser
+        email = request.form['email']
+        password = request.form['password']
+        doctorAccount = doctorsAccount6.query.filter_by(email=email, password=password).all() 
+        if doctorAccount:
+            accountLoginUser =  doctorsAccount6.query.get(email)
+            session['logged_in'] = True  
+            return redirect(url_for('doctor_login'))
+    return redirect(url_for('doctor_login'))
+
 @app.route('/doctor_login', methods=['POST', 'GET'])
 def doctor_login(): 
-    reports = medicalReport.query.all()
-    return render_template('doctor_login.html', reports = reports)
+    if not session.get('logged_in'):
+        return render_template('doctor_login_portal.html')
+    else:
+        print(accountLoginUser)
+        reports = medicalReport2.query.all()
+        return render_template('doctor_login.html', doctorAccount = accountLoginUser, reports = reports)
 
 @app.route('/getFirstResponse', methods=['GET', 'POST'])
 def get_first_bot_response():
@@ -206,6 +260,7 @@ def get_bot_response():
     
 
 if __name__ == '__main__':
+    app.secret_key = os.urandom(12)
     app.run(debug=True)
     
 

@@ -30,24 +30,16 @@
         </div>
     </article>  
  
-    <h2 style="margin-top: 40px; margin-bottom: 0px; margin-left: 34%; margin-right: 25px; padding: 10px; text-align: right">Hello, {{doctorAccount.firstName}} {{doctorAccount.lastName}}</h2>
-    <div class="reportCenter">
-        
-        <ul class="medicalLinks" style="text-align:left;">
-            {% for report in reports %}
-                <li class="medPoints">
-                    <p class="patientID" style="text-align:left;">Patient-ID: {{report.id}}</p>
-                    <a class="medicalReportLinks" href={{ report.url_to_txt }} target="blank">Patient User Report |View in Browser|</a>
-                    <br>
-                    <a class="medicalReportLinks" href={{ report.url_to_txt }} download="report.txt">Patient User Report |Download|</a>
-                </li>
-                <span class="timeStamp">Timestamp: {{report.date_time}}</span>
-                <br>
-                <br>
-                {% endfor %}
-        <ul>
-
-    <div>
+    <h2 style="margin-top: 40px; margin-bottom: 0px; margin-left: 38%; padding: 10px; text-align: center">Connection Page |Patients + Doctors|</h2>
+    <em><h5 style="padding: 0px; margin-top: 0px; margin-left:43%; margin-right: 50px; text-align: center">Hover over each of the buttons, to see how patients can connect with doctors or how doctors can connect with the data of patients!</h5></em>
+    
+    <form action="/doctor_login" method='GET'>
+        <button class="doctor" id="choicePORTAL" title="Login with your doctor credential account, in order to view generated reports!">Doctor Login</button>
+    </form>
+    <form action="/patient_connect" method='GET'>
+        <button class="patient" id="choicePORTAL" title="Contact professionals, specialists, and doctors connected to this site for more medical help!">Patient Connect</button>
+    </form>
+    
     
 </body>
 </html>
