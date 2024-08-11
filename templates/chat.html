@@ -57,7 +57,7 @@
                 if(i == 0) {
                     $("span").text(rawText);
                     $.get("/getFirstResponse").done(function (data) {
-                        alert(data)
+
                         var botHtml = '<p class="botText" style="padding:10px;">' + data + "</p>";
                         var userHtml = '<p class ="userText" style="padding:10px;">' + rawText + "</p>"; 
 
@@ -68,7 +68,7 @@
                 } else {
                     $("span").text(rawText);
                     $.get("/get", { msg: rawText }).done(function (data) {
-                        alert(data)
+
                         var botHtml = '<p class="botText" style="padding:10px;">' + data + "</p>";
                         var userHtml = '<p class ="userText" style="padding:10px;">' + rawText + "</p>"; 
 

@@ -181,7 +181,7 @@ def main_Page():
 
 @app.route('/chat', methods=['POST','GET'])
 def chat_Page():
-    print(medicalReport3.query.all())
+    # print(medicalReport3.query.all())
     # print(geminiRunEvaluation(patient_summary_message))
     global chat, chatUser
     chat = chat_model2.start_chat(history=[])
@@ -242,7 +242,7 @@ def doctor_login():
     if not session.get('logged_in'):
         return render_template('doctor_login_portal.html')
     else:
-        print(accountLoginUser)
+        # print(accountLoginUser)
         reports = medicalReport3.query.all()
         return render_template('doctor_login.html', doctorAccount = accountLoginUser, reports = reports)
 
@@ -253,10 +253,10 @@ def get_first_bot_response():
 
 @app.route('/get', methods=['GET', 'POST'])
 def get_bot_response(): 
-    print("hello")
+    # print("hello")
     chatUser = request.args.get('msg')
     chat_response = chat.send_message(chatUser)
-    print(chat_response.text)
+    # print(chat_response.text)
     return (chat_response.text)
     
     
