@@ -24,14 +24,17 @@
     
     <article>
         <div class= "icon-style" style = "text-align: left;">
-            <img src="static\images\pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg" alt="Main Logo" style="margin: 0px; width:400px;height:400px;">
-            <h1 style="margin: 0px;">TheraAI<sup>assistant</sup></h1>
-            <h5 style="padding=10px; text-align:left; margin-left: 25px;"><em>Doctor Session Connect/Contact<em><h5>
+            <img class="icon" src="static\images\pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg" alt="Main Logo" style="margin-left: 15%; margin-top: 7%; width:400px;height:400px;">
+            <h1 class="mainTITLE" style="margin-left: 15%; margin-bottom: 0;"><a style="text-decoration: none; color: black;" href="/home">TheraAI<sup>assistant</sup></a></h1>
+            <h5 class="mainsubTITLE" style="margin-left: 25%;"><em>Doctor Session Connect/Contact<em><h5>
         </div>
     </article>  
+
+    <h1 style="font-style: normal; text-align: right; margin-bottom: 0px;">Report Center</h1>
+    <h5 style="font-style: normal; margin-top: 0px; margin-bottom: 0px; margin-left: 50%; margin-right: 25px; padding: 10px; text-align: right">As a doctor, you can view the most recent-generated medical reports on the site, including if you had made one by using the "About Patient" form.</h5>
  
-    <h2 style="margin-top: 40px; margin-bottom: 0px; margin-left: 34%; margin-right: 25px; padding: 10px; text-align: right">Hello, {{doctorAccount.firstName}} {{doctorAccount.lastName}}</h2>
-    <div class="reportCenter">
+    <h5 style="font-style: normal; margin-top: 0px; margin-bottom: 0px; margin-left: 34%; margin-right: 25px; padding: 10px; text-align: right">Account Logged: In :: <em>Hello, {{doctorAccount.firstName}} {{doctorAccount.lastName}}!</em></h5>
+    <div class="reportCenter" style="margin-top: 10px;">
         
         <ul class="medicalLinks" style="text-align:left;">
             {% for report in reports %}

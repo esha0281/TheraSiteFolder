@@ -125,15 +125,16 @@ class Prompt_Answer3(db.Model):
     prompt: Mapped[str] = mapped_column(unique=False)
     answer: Mapped[str] = mapped_column(primary_key = True)
     
-class medicalReport2(db.Model):
+class medicalReport3(db.Model):
     id: Mapped[str] = mapped_column(primary_key= True)
     url_to_txt: Mapped[str] = mapped_column(primary_key= True)
     date_time: Mapped[str] = mapped_column()
     
-class doctorsAccount6(db.Model):
+class doctorsAccount7(db.Model):
     firstName: Mapped[str] = mapped_column()
     lastName: Mapped[str] = mapped_column()
     officeLocation: Mapped[str] = mapped_column()
+    phoneNumber: Mapped[str] = mapped_column()
     email: Mapped[str] = mapped_column(primary_key=True)
     password: Mapped[str] = mapped_column()
     
@@ -169,7 +170,7 @@ def main_Page():
         # db.session.commit()
         # geminiConfigure(sysCHAT_InstructionsFILE)
         
-        reportGeneration = medicalReport2(id = id, url_to_txt = '' + response_output_file_path + '', date_time=str(datetime.datetime.now()))
+        reportGeneration = medicalReport3(id = id, url_to_txt = '' + response_output_file_path + '', date_time=str(datetime.datetime.now()))
         db.session.add(reportGeneration)
         db.session.commit() 
         return redirect(url_for('chat_Page'))
@@ -180,7 +181,7 @@ def main_Page():
 
 @app.route('/chat', methods=['POST','GET'])
 def chat_Page():
-    print(medicalReport2.query.all())
+    print(medicalReport3.query.all())
     # print(geminiRunEvaluation(patient_summary_message))
     global chat, chatUser
     chat = chat_model2.start_chat(history=[])
@@ -203,7 +204,7 @@ def connect_session():
 
 @app.route('/patient_connect', methods=['POST', 'GET'])
 def patient_connect():
-    doctorsContact= doctorsAccount6.query.all()
+    doctorsContact= doctorsAccount7.query.all()
     return render_template('patient_connect.html', contacts = doctorsContact)
 
 @app.route('/doctor_create_portal', methods=['POST', 'GET']) 
@@ -214,8 +215,9 @@ def create_account():
         location = request.form['location']
         emailAccount = request.form['email']
         passwordAccount = request.form['password']
+        phoneNumber= request.form['phoneNumber']
         
-        addNewDoctor = doctorsAccount6(firstName = firstNameAccount, lastName = lastNameAccount, officeLocation = location, email = emailAccount, password = passwordAccount)
+        addNewDoctor = doctorsAccount7(firstName = firstNameAccount, lastName = lastNameAccount, officeLocation = location, phoneNumber = phoneNumber, email = emailAccount, password = passwordAccount)
         db.session.add(addNewDoctor)
         db.session.commit()
         return redirect(url_for('login_required'))
@@ -223,14 +225,14 @@ def create_account():
 
 @app.route("/doctor_login_portal", methods=['POST', 'GET'])
 def login_required():
-    # print(doctorsAccount6.query.all())  
+    # print(doctorsAccount7.query.all())  
     if request.method == 'POST': 
         global accountLoginUser
         email = request.form['email']
         password = request.form['password']
-        doctorAccount = doctorsAccount6.query.filter_by(email=email, password=password).all() 
+        doctorAccount = doctorsAccount7.query.filter_by(email=email, password=password).all() 
         if doctorAccount:
-            accountLoginUser =  doctorsAccount6.query.get(email)
+            accountLoginUser =  doctorsAccount7.query.get(email)
             session['logged_in'] = True  
             return redirect(url_for('doctor_login'))
     return redirect(url_for('doctor_login'))
@@ -241,7 +243,7 @@ def doctor_login():
         return render_template('doctor_login_portal.html')
     else:
         print(accountLoginUser)
-        reports = medicalReport2.query.all()
+        reports = medicalReport3.query.all()
         return render_template('doctor_login.html', doctorAccount = accountLoginUser, reports = reports)
 
 @app.route('/getFirstResponse', methods=['GET', 'POST'])

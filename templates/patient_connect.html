@@ -24,27 +24,31 @@
     
     <article>
         <div class= "icon-style" style = "text-align: left;">
-            <img src="static\images\pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg" alt="Main Logo" style="margin: 0px; width:400px;height:400px;">
-            <h1 style="margin: 0px;">TheraAI<sup>assistant</sup></h1>
-            <h5 style="padding=10px; text-align:left; margin-left: 25px;"><em>Doctor Session Connect/Contact<em><h5>
+            <img class="icon" src="static\images\pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg" alt="Main Logo" style="margin-left: 15%; margin-top: 7%; width:400px;height:400px;">
+            <h1 class="mainTITLE" style="margin-left: 15%; margin-bottom: 0;"><a style="text-decoration: none; color: black;" href="/home">TheraAI<sup>assistant</sup></a></h1>
+            <h5 class="mainsubTITLE" style="margin-left: 25%;"><em>Doctor Session Connect/Contact<em><h5>
         </div>
     </article>  
  
-    <h2 style="margin-top: 40px; margin-bottom: 0px; margin-left: 38%; padding: 10px; text-align: center">Connection Chart - Social Email Contact</h2>
+    <h1 style="font-style:normal; margin-left:40%; margin-top: 40px; margin-bottom: 0px;  padding: 10px; text-align: center">Connection Chart</h1>
+    <h2 style="font-style:italic; margin-left:40%; margin-top: 0px; margin-bottom: 0px; padding: 10px;text-align: center;">:: social connection page ::</h2><br>
+    <h5 style="padding: 0px; margin-top: 0px; margin-left:40%; margin-right: 50px; font-style: normal; text-align: center">Need to connect with a doctor, after finding out some needed health information. Use this chart, find one connected to the webstie.</h5>
     <div class="reportCenter">
         
-        <table class="contactList">
+        <table class="contactList" style="width: 500px; ">
             <tr>
-                <th>First Name:</th>
-                <th>Last Name:</th>
-                <th>Email:</th>
-                <th>Office Location:</th>
+                <th style="">First Name:</th>
+                <th style="">Last Name:</th>
+                <th style=" ">Email:</th>
+                <th style="">Phone Number:</th>
+                <th style="">Office Location:</th>
             </tr>
             {% for contact in contacts %}
                 <tr>
                     <td>{{contact.firstName}}</td>
                     <td>{{contact.lastName}}</td>
                     <td>{{contact.email}}</td>
+                    <td>{{contact.phoneNumber}}</td>
                     <td>{{contact.officeLocation}}</td>
                 </tr>
                 {% endfor %}

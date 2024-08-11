@@ -13,6 +13,18 @@
   to {box-shadow: 0 0 40px rgb(110, 47, 62) ;}
 }
 
+@keyframes rotate3d {
+  from {transform: none;}
+  to {transform: rotateY(180deg);}
+}
+
+@keyframes rotate2d {
+  0% {transform: none;} 
+  25% {transform: rotate(30deg);}
+  50% {transform: rotate(-30deg);}
+  100% {transform: rotate(-30deg);}
+}
+
 
 .lexend-main_title {
     font-family: "Lexend", sans-serif;
@@ -312,7 +324,7 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 320px;
+    width: 340px;
     margin: 0 auto;
     background-color: #f5f5f5;
     box-shadow: 0 0 20px #575656;
@@ -443,5 +455,71 @@
   img.icM {
     transform: none;
   }
+
+  .webpageCard {
+    width: 25%;
+    height: 710px;
+    border-radius: 20px;
+    padding: 15px; 
+    background: linear-gradient(315deg, rgba(201, 85, 121, 1.0), rgba(233, 72, 75, 1.0));
+    transform: none;
+    animation-name: rotate3d;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-direction: alternate; 
+
+  }
+
+  .webpageCard:hover {
+    box-shadow: 0 0 20px #575656;
+    transform: none;
+    animation-name: rotate2d;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate; 
+  }
+
+  .mainCardheader {
+    background-color:beige; 
+    padding-top: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #7c2929;
+    width: 87%;
+    height: 40px;
+  }
+
+  .mainCardLeft {
+    margin-top: 2%;
+    background-color:beige; 
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: -10px 5px 20px #7c2929;
+    width: 5%;
+    height: 360px;
+  }
+
+  .mainCardRight{
+    margin-top: 2%;
+    background-color:beige; 
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 10px 5px 20px #7c2929;
+    width: 5%;
+    height: 430px;
+  }
+
+  .mainCardFooter {
+    padding-top: 3%;
+    background-color:beige; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px #7c2929;
+    width: 87%;
+    height: 1px;
+  }
+
+  .subSUBHometitle {
+    font-family: "Work Sans", sans-serif;
+    font-style: italic; 
+    font-weight: normal;
+  }
+
 
 
