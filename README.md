@@ -7,6 +7,8 @@
 # **Website Exploration**
 #### In depth of the web-application
 
+_______________________________________________________________________________________________________________
+
 ###### *About Section:* 
 
 [About/Home Section of Website](https://eshams28.pythonanywhere.com/home)
@@ -22,8 +24,10 @@ Integratated medical report generation that can be linked, and utilized in-brows
 Includes opportunities for patients to connect with doctors registered on the site, and for doctors to have a virtual assistant, and accessible environment for collecting data. 
 
 *Private* :: *Personalized* :: *Priceless* 
+_______________________________________________________________________________________________________________
 
-###### * Section:* 
+###### *Mission* 
+*An online web-app dedicated to providing others, and option for free, accessible, personalized, and efficient health-advice, and healthcare.*
 
 Technical Description:
 With a sequenced back-end (Flask_Python, Flask Database Mechanics, Asynchornous requests for JSON Data Objects, Login Sessions, Portal Exploration), front-end with main css (including animations/static actions), and HTML5 data Jinja(Flask) templates. 
