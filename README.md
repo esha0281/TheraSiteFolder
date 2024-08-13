@@ -29,10 +29,15 @@ ________________________________________________________________________________
 ###### *Mission* 
 *An online web-app dedicated to providing others, and option for free, accessible, personalized, and efficient health-advice, and healthcare.*
 
+Struggling Issues of Healthcare and Provider Avaibility in the US and World: 
+
 > *"—In 2020, 31.6 million (9.7%) people of all ages were uninsured. . .This includes 31.2 million (11.5%) people under age 65. Among 
 children, 3.7 million (5.0%) were uninsured, and among working-age adults (aged 
 18–64), 27.5 million (13.9%) were uninsured."*
 ><br>[National Health Statistics Report 2022 #169](https://www.cdc.gov/nchs/data/nhsr/nhsr169.pdf#:~:text=Results%E2%80%94In%202020%2C%2031.6%20million%20%289.7%25%29%20people%20of%20all,adults%20%28aged%2018%E2%80%9364%29%2C%2027.5%20million%20%2813.9%25%29%20were%20uninsured.)
+
+>*"In 2023, the national average was 9.1 percent. White Americans had a below-average rate of just 5.8 percent, whereas 8.6 percent of Black Americans had no health insurance. Including 19% of Hispanics, and 3.9% of non-hispanic Asians."*
+><br>[Percentage of people in the U.S. without health insurance by ethnicity 2010-2023 || Statista](https://www.statista.com/statistics/200970/percentage-of-americans-without-health-insurance-by-race-ethnicity/)
 
 Technical Description:
 With a sequenced back-end (Flask_Python, Flask Database Mechanics, Asynchornous requests for JSON Data Objects, Login Sessions, Portal Exploration), front-end with main css (including animations/static actions), and HTML5 data Jinja(Flask) templates. 
