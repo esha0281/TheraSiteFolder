@@ -48,6 +48,9 @@ ________________________________________________________________________________
 [Getting Started Page of Website](https://eshams28.pythonanywhere.com)
 <br>![Getting Started demo](media_README/AI_Medical_Form.gif)
 
+# **Credit**
+![DeloreanGifFromGeminiAPI](https://ai.google.dev/static/videos/dolorean.webm)
+
 
 Technical Description:
 With a sequenced back-end (Flask_Python, Flask Database Mechanics, Asynchornous requests for JSON Data Objects, Login Sessions, Portal Exploration), front-end with main css (including animations/static actions), and HTML5 data Jinja(Flask) templates. 
