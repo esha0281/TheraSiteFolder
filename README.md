@@ -42,6 +42,12 @@ children, 3.7 million (5.0%) were uninsured, and among working-age adults (aged
 >*"At least 4.5 billion people – more than half the world’s population – are not fully covered by essential health services, according to 2021 data."*
 ><br>*"Access to basis healthcare caused financial hardship for nearly two billion people, while over 1.3 billion were pushed back or pushed deeper into poverty just trying to access basic services and medicines – a stark reality of widening health inequities, according to WHO."*
 ><br>[United Nations Global Perspective Healthcare](https://news.un.org/en/story/2023/09/1141202)
+_______________________________________________________________________________________________________________
+
+###### *Getting Started Page* 
+[Getting Started Page of Website](https://eshams28.pythonanywhere.com)
+
+
 
 Technical Description:
 With a sequenced back-end (Flask_Python, Flask Database Mechanics, Asynchornous requests for JSON Data Objects, Login Sessions, Portal Exploration), front-end with main css (including animations/static actions), and HTML5 data Jinja(Flask) templates. 
