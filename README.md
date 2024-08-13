@@ -1,3 +1,5 @@
+![WebsiteLogo](https://eshams28.pythonanywhere.com/static/images/pulse_alert_120dp_E11919_FILL0_wght400_GRAD0_opsz48.svg)
+
 
 # **TheraAI<sup>assitant</sup>: Virtual Med Assitant**
 ### Gemini API Included [Flask, HTML5 Build]
