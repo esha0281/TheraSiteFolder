@@ -49,7 +49,7 @@ ________________________________________________________________________________
 <br>![Getting Started demo](media_README/AI_Medical_Form.gif)
 
 # **Credit**
-![DeloreanGifFromGeminiAPI](media_README/delorean.webm)
+![DeloreanGifFromGeminiAPI](media_README/dolorean.webm)
 
 
 Technical Description:
