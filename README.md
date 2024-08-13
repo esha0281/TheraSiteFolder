@@ -7,7 +7,7 @@
 A complete website application built with purpose to translate, store, send, and present medical information, advice, and generated reports from patient, user, or doctor, to present a clearer diagnosis, at a faster efficiency, including specifics such as required medication (dosages), lifestyle modifications, and possible discussion help with patients. 
 
 > [!TIP]
-> #builtwithgemini
+> Check out the promotional video → [#builtwithgemini]("https://youtu.be/hTcykSfz-d4")
 
 Integratated medical report generation that can be linked, and utilized in-browser tab, file download & retrieval, includes in-site chat-assitant avaibility for specific patients (upon submitting the symptom form). 
 
