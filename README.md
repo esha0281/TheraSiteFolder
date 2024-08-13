@@ -46,7 +46,7 @@ ________________________________________________________________________________
 
 ###### *Getting Started Page* 
 [Getting Started Page of Website](https://eshams28.pythonanywhere.com)
-[Getting Started demo](/media_READ)
+<br>[Getting Started demo](media_README/AI_Medical_Form.gif)
 
 
 Technical Description:
