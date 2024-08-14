@@ -113,7 +113,18 @@ You can create a test-doctor account (with pseudo names, emails, phone-numbers, 
 
 After creating and logging in with the doctor account, you will be taken to the “Report Center” Page, where you will see all the anonymous API-model generated medical reports on the site, including the one you sent earlier when you were checking the “Getting Started Page”, look through the time-stamps and tap the links, in order to find your report, with your symptom conditions listed, and view what the AI had generated. You can further download the file in a text format to save on a device. 
 
-After checking out the Doctor Contact, we can maneuver to the Patient Contact. 
+```mermaid
+graph TD;
+    Doctor-Connect-Site-->Doctor-Connect;
+    Doctor-Connect-->Doctor-Account-Login-Portal;
+    Doctor-Account-Login-Portal-->Account-Login;
+    Account-Login-->Report-Portal;
+    Report-Portal-->Generated-Medical-Reports;
+    Doctor-Account-Login-Portal-->Create-Account;
+    Create-Account-->Account-Login;
+```
+
+After checking out the Doctor Contact, we can maneuver to the Patient Connect Page. 
 
 
 #### *Patient Connection* 
