@@ -4,6 +4,10 @@
 
 [TheraAI<sup>assitant</sup> Site](https://eshams28.pythonanywhere.com)
 
+> [!NOTE]
+> Read this in your browser: [README.md Site](https://esha0281.github.io)
+
+
 # **Website Exploration**
 #### In depth of the web-application
 
