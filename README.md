@@ -73,6 +73,17 @@ ________________________________________________________________________________
 
 ![ChatSiteIntro](media_README/chat-site.gif)
 
+> [!TIP]
+> Link to HTML Page File: ["Getting Started"](templates/chat.html)
+
+```mermaid
+graph TD;
+    User-Sends-Message-->Sends-to-Chat-API;
+    Sends-to-Chat-API-->Develops-a-Message;
+    Develops-a-Message-->Updates-Site-Elements;
+    Updates-Site-Elements-->User-Sees-Reply;
+    User-Sees-Reply-->User-Sends-Message;
+```
 
 # **Credit**
 ![DeloreanGifFromGeminiAPI](media_README/dolorean.gif)
