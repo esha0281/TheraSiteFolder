@@ -64,6 +64,9 @@ graph TD;
     Generates-Medical-Report-->Saves-to-Site-Portal;
     Saves-to-Site-Portal-->Doctors-On-Site
 ```
+_______________________________________________________________________________________________________________
+
+###### *Chat Page* 
 
 # **Credit**
 ![DeloreanGifFromGeminiAPI](media_README/dolorean.gif)
