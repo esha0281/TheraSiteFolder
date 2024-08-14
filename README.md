@@ -208,18 +208,21 @@ Future plans are to integrate with sites like MyChart, CVS Pharm +, and other of
 
 <br>
 
-Copyright (c) <dates>, esha0281 (or DevSYPrograms),
-with Reserved Font Name <Reserved Font Name>, 
+Copyright (c) 2024, esha0281 (or DevSYPrograms),
+<br>with Reserved Font Name "Lexend", sans-serif, 
+<br>with Reserved Font Name "Anton SC", sans-serif, 
+<br>with Reserved Font Name "Poppins", sans-serif, 
+<br>with Reserved Font Name "Work-Sans", sans-serif, 
+
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
 https://openfontlicense.org
- 
+<br>-———————————————————————
 
--———————————————————————
+<br>SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 
-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
--———————————————————————
+<br>-———————————————————————
 
 
 # **Thank you to Gemini, Google, and Kaggle**
