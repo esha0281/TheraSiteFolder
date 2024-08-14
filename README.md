@@ -100,12 +100,12 @@ Look at the main connection page, hover over the buttons “Doctor Login”, and
 #### *Doctor Login:* 
 ![DoctorConnect+ Doctor Login Page GIF](media_README/login_Doctor.gif)
 
-First We can access the Doctor Login Site: 
+First, we can access the Doctor Login Site: 
 Press the Doctor Login Button, you are now on the login page .. .
 Here you can either use an already-created demo doctor account: 
-bob@gmail.com (enter email) bob (enter password)
-red@gmail.com (enter email) red (enter password) 
-And then pressing log-in 
+*bob@gmail.com (enter email) bob (enter password)*
+*red@gmail.com (enter email) red (enter password)*
+And then press log-in 
 
 OR 
 
