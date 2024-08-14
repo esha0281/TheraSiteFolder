@@ -93,10 +93,31 @@ graph TD;
     User-Sees-Reply-->User-Sends-Message;
 ```
 
-###### *Doctor Connect+* 
+###### *Doctor Connect+:*
 
+Look at the main connection page, hover over the buttons “Doctor Login”, and “Patient Connect”, to get a better understanding of what they do, and where they take you in the website. Here in this page, doctors signed-up or logged in onto the site, can check out the anonymously generated medical reports (such as the one you did earlier in the “Getting Started Tab”) and can Login/or Sign Up with the Site. Patients or universal users on the site, can access the patient connect section, in which patients can look at the list of the doctors, and some of their work contact info entered on the site, in order to connect with them. 
+
+#### *Doctor Login:* 
 ![DoctorConnect+ Doctor Login Page GIF](media_README/login_Doctor.gif)
-<br>![DoctorConnect+ Patient Connect Page GIF](media_README/patient_Connect.gif)
+
+First We can access the Doctor Login Site: 
+Press the Doctor Login Button, you are now on the login page .. .
+Here you can either use an already-created demo doctor account: 
+bob@gmail.com (enter email) bob (enter password)
+red@gmail.com (enter email) red (enter password) 
+And then pressing log-in 
+
+OR 
+
+You can create a test-doctor account (with pseudo names, emails, phone-numbers, locations, etc) DO NOT LINK ANY REAL EMAILS, as this database is for session-testing purposes, and the log-in and sign-up process is all internal not needing email verification, by pressing the create-account button (if you type in an email that already exists it will continue to reload the create-website, so use an email, that is not already been linked to an account on the site, this is for security purposes) 
+
+After creating and logging in with the doctor account, you will be taken to the “Report Center” Page, where you will see all the anonymous API-model generated medical reports on the site, including the one you sent earlier when you were checking the “Getting Started Page”, look through the time-stamps and tap the links, in order to find your report, with your symptom conditions listed, and view what the AI had generated. You can further download the file in a text format to save on a device. 
+
+After checking out the Doctor Contact, we can maneuver to the Patient Contact. 
+
+
+#### *Patient Connection* 
+![DoctorConnect+ Patient Connect Page GIF](media_README/PatientConnect.gif)
 
 # **Credit**
 ![DeloreanGifFromGeminiAPI](media_README/dolorean.gif)
