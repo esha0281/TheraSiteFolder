@@ -96,7 +96,7 @@ graph TD;
 ###### *Doctor Connect+* 
 
 ![DoctorConnect+ Doctor Login Page GIF](media_README/login_Doctor.gif)
-![DoctorConnect+ Patient Connect Page GIF](media_README/patient_connect.gif)
+<br>![DoctorConnect+ Patient Connect Page GIF](media_README/patient_Connect.gif)
 
 # **Credit**
 ![DeloreanGifFromGeminiAPI](media_README/dolorean.gif)
