@@ -153,7 +153,30 @@ After this, you may bounce around the site freely, utilizing and testing more me
 Future plans are to integrate with sites like MyChart, CVS Pharm +, and other office sites, to allow for virtual medical assistants (via Gemini and our Site), and greater support for patient care. 
 
 # **Technical Documentation**
-#### Languages
+####  :trollface: Languages 
+
+* **Python** *(Switching between dependencies and Versions)*
+* **HTML5**
+* **CSS** *(no bootstrap)*
+* **JavaScript** *(Simple Script Templates)*
+* **Jinja** *(asynchronous activity and web updates // Flask integration)*
+* **C++** *(only library configuration or virtual env config)*
+
+####  :trollface: Dependcies and Libraries 
+> [!WARNING]
+> All use of libraries require above Python 3.9, however, may have issues with the newest deployment of 3.12.<br>This may change in the future
+
+>[!CAUTION]
+>The use of a flask or python deploying server, or app, will most-likely only have support for Python 3.10, as seen with using PythonAnywhere. Be aware of this when building your app, or using similar libraries and dependencies config.
+
+* **Pyhon-3.10**
+* **Python-3.12**
+* **Flask, Flask-Python**
+* **Flask-SQLAlchemy**
+* **Google Generative AI**
+* **Python-dotenv**
+
+
 
 # **Credit**
 ![DeloreanGifFromGeminiAPI](media_README/dolorean.gif)
