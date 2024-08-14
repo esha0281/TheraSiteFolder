@@ -57,7 +57,7 @@ Any specific information such as weight, height, age, and gender is completely a
 
 Once submitted the form will send a request with your responses, allowing the AI model to generate an example medical report, in which you can access with a doctor's account on the site. Furthermore, after submitting the form, you will be taken to another page in the site, where you can chat with the AI to get any further medical anwer you may have with your situation. 
 
-Here is a simple flow chart:
+Sequence of WebAction:
 
 ```mermaid
 graph TD;
@@ -73,8 +73,16 @@ ________________________________________________________________________________
 
 ![ChatSiteIntro](media_README/chat-site.gif)
 
+Here, read the chat messages sent by the chat-generation model. You can enter a message below, and press the send button, and wait for the response to appear in the message area directly under the Chat Assistant title. To start the conversation, type and send a message, “I need help”, and proceed to wait 1-2 minutes for any message/response to be printed by the model. 
+
+Answer any questions, follow through with any of the responses the model will send back to you as the patient or the doctor. Answer and message back and forth for a couple of messages between the Chat-assistant, viewing its element of service, medical advice/help, or analysis throughout your personalized healthcare journey. The AI may give suggestions, or resources to connect to other health professionals. 
+
 > [!TIP]
-> Link to HTML Page File: ["Getting Started"](templates/chat.html)
+> Link to HTML Page File: ["Chat Page"](templates/chat.html)
+
+To leave the chat, type & send, “I am satisfied with my care”. And tap out of that page, by either accessing or going back to “Home”, “Getting Started”, or “Doctor Connect+” 
+
+Sequence of WebAction:
 
 ```mermaid
 graph TD;
